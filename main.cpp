@@ -497,7 +497,7 @@ void decodeData(void)
         break;
         case SETLEDSTATE:
             auxBuffTx[indiceAux++]=SETLEDSTATE;
-            //togleLed(datosComProtocol.payload[7]);
+            togleLed(datosComProtocol.payload[2]);
             myWord.ui16[0]=leds;
             auxBuffTx[indiceAux++]=myWord.ui8[0];
             auxBuffTx[indiceAux++]=myWord.ui8[1];
