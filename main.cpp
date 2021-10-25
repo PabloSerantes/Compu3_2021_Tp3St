@@ -334,7 +334,6 @@ void actuallizaMef(uint8_t indice){
                 datosComProtocol.payload[1] = GETBUTTONSTATE;                
                 decodeData();
             }
-           // togleLed(indice);
         }
 
         else
@@ -360,11 +359,6 @@ void togleLed(uint8_t indice){
     else
          ledsAux |= 1 << (indice) ;
     leds = ledsAux ;
-
-    if(pcCom.writable()){
-        datosComProtocol.payload[1] = GETLEDSTATE;
-        decodeData();
-    }
 }
 
 
@@ -438,12 +432,12 @@ void decodeProtocol(void)
             }
             break;
             case NBYTES:
-                nBytes=datosComProtocol.bufferRx[datosComProtocol.indexReadRx++];
-               estadoProtocolo=TOKEN;
+                    nBytes=datosComProtocol.bufferRx[datosComProtocol.indexReadRx++];
+                    estadoProtocolo=TOKEN;
                 break;
             case TOKEN:
                 if (datosComProtocol.bufferRx[datosComProtocol.indexReadRx++]==':'){
-                   estadoProtocolo=PAYLOAD;
+                    estadoProtocolo=PAYLOAD;
                     datosComProtocol.cheksumRx ='U'^'N'^'E'^'R'^ nBytes^':';
                     datosComProtocol.payload[0]=nBytes;
                     indice=1;
@@ -503,16 +497,18 @@ void decodeData(void)
         break;
         case SETLEDSTATE:
             auxBuffTx[indiceAux++]=SETLEDSTATE;
-            myWord.ui8[0]=datosComProtocol.payload[2];
-            myWord.ui8[1]=datosComProtocol.payload[3];
-            auxBuffTx[NBYTES]=0x02;
-            manejadorLed(myWord.ui16[0]);
+            //togleLed(datosComProtocol.payload[7]);
+            myWord.ui16[0]=leds;
+            auxBuffTx[indiceAux++]=myWord.ui8[0];
+            auxBuffTx[indiceAux++]=myWord.ui8[1];
+            auxBuffTx[NBYTES]=0x04;
         break;
         case BUTTONEVENT: 
             auxBuffTx[indiceAux++]=BUTTONEVENT;
             myWord.ui8[0]=buttonArray ^ 0x0F;
             myWord.ui8[1]=ourButton[indexBut].estado;
            // myWord.ui32=miTimer.read_ms();
+            datosComProtocol.payload[1] = GETLEDSTATE;
             auxBuffTx[NBYTES]=0x04;
         break;
         case GETBUTTONSTATE: 
@@ -521,6 +517,7 @@ void decodeData(void)
             auxBuffTx[indiceAux++]=myWord.ui8[0];
             auxBuffTx[indiceAux++]=myWord.ui8[1];
             auxBuffTx[NBYTES]=0x04;
+            togleLed(indexBut);
         break;
 
         default:

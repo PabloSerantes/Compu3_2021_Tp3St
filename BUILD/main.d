@@ -1,5 +1,5 @@
 main.o: \
- C:/Pablo/compu3_2021/Practicas_Compu_3/Ejercicios/Tp3/ladoVsCode/BaseProject/main.cpp \
+ J:/Pablo/Facultad/compu_3/anio_2021/practicas/ejercicios/A3ST/Compu3_2021_Tp3St/main.cpp \
  .././mbed_config.h ../mbed/mbed.h ../mbed/platform/mbed_version.h \
  ../mbed/platform/mbed_toolchain.h ../mbed/platform/mbed_preprocessor.h \
  ../mbed/platform/platform.h ../mbed/platform/mbed_retarget.h \

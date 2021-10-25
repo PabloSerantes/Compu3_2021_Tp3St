@@ -7,12 +7,12 @@
 
 # Configuración del Poryecto
 # Configure aqui directorio del Proyecto antes de compilar
-PROJECTPATH = C:/Pablo/compu3_2021/Practicas_Compu_3/Ejercicios/Tp3/ladoVsCode/BaseProject
+PROJECTPATH = J:/Pablo/Facultad/compu_3/anio_2021/practicas/ejercicios/A3ST/Compu3_2021_Tp3St
 
 # Link para obtener el compilador
 # https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-win32.zip?revision=d8809bf7-a431-49ee-98d5-0475d839f8f1?product=GNU%20Arm%20Embedded%20Toolchain,ZIP,,Windows,6-2017-q2-update
 # Configure aqui directorio del COMPILADOR ARM-GCC MBED para poder compilar 
-COMPILERDIR = C:/Pablo/compu3_2021/Practicas_Compu_3/Util/Compiladores/gcc-arm-none-eabi/bin
+COMPILERDIR = J:/Pablo/Facultad/compu_3/anio_2021/practicas/util/compiladores/gcc-arm-none-eabi/bin
 
 ###############################################################################
 # Boiler-plate

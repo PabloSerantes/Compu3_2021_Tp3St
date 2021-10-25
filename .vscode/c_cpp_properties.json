@@ -5,10 +5,10 @@
             "forcedInclude": [
                 "${workspaceFolder}/mbed_config.h"
             ],
-            "compilerPath": "C:/Pablo/compu3_2021/Practicas_Compu_3/Util/Compiladores/gcc-arm-none-eabi/bin/arm-none-eabi-g++",
+            "compilerPath": "J:/Pablo/Facultad/compu_3/anio_2021/practicas/util/compiladores/gcc-arm-none-eabi/bin/arm-none-eabi-g++",
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                //"/usr/src/mbed-sdk/*",
+               
                 "mbed/*",
                 "mbed/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM/*",
                 "mbed/drivers/*",
@@ -151,9 +151,9 @@
             "forcedInclude": [
                 "${workspaceFolder}/mbed_config.h"
             ],
-            "compilerPath": "C:/Pablo/compu3_2021/Practicas_Compu_3/Util/Compiladores/gcc-arm-none-eabi/bin/arm-none-eabi-g++",
+            "compilerPath": "J:/Pablo/Facultad/compu_3/anio_2021/practicas/util/compiladores/gcc-arm-none-eabi/bin/arm-none-eabi-g++",
             "includePath": [
-                //"/usr/src/mbed-sdk/*",
+                
                 "mbed/*",
                 "mbed/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM/*",
                 "mbed/drivers/*",
